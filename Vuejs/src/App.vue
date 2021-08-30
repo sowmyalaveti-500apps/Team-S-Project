@@ -1,18 +1,18 @@
 <template>
-  <div id="app">
+  <div>
     <ResumeParser />
   </div>
 </template>
 
 <script>
-import ResumeParser from './components/ResumeParser.vue'
+import ResumeParser from "./components/ResumeParser.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    ResumeParser
-  }
-}
+    ResumeParser,
+  },
+};
 </script>
 
 <style>

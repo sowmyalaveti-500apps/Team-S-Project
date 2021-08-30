@@ -1,24 +1,138 @@
 <template>
   <div>
     <b-form submit="submit">
-      <div class="container">
+      <b-container fluid>
         <h1>Candidate Info</h1>
         <p>Please fill in this form to apply for a job.</p>
-        <b-row v-for="field in shortcutFields" :key="field.key">
-          <b-col>
-            <label :for="field.key">{{ field.label }}</label>
+        <b-row>
+          <b-col cols="2">
+            <label for="name">Name</label>
           </b-col>
-          <b-col>
-            <b-form-textarea
-              class="input truncate"
-              :id="field.key"
-              v-model="shortcuts[field.key]"
-              :placeholder="field.label"
-              type="text"
-            ></b-form-textarea>
+          <b-col cols="10">
+            <b-form-input
+              class="input"
+              id="name"
+              placeholder="Name"
+              v-model="shortcuts['name']"
+            >
+            </b-form-input>
           </b-col>
         </b-row>
-      </div>
+        <b-row>
+          <b-col cols="2">
+            <label for="college_name">College Name</label>
+          </b-col>
+          <b-col cols="10">
+            <b-form-input
+              class="input"
+              id="college_name"
+              placeholder="College Name"
+              v-model="shortcuts['college_name']"
+            >
+            </b-form-input>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="2">
+            <label for="company_names">Company Names</label>
+          </b-col>
+          <b-col cols="10">
+            <b-form-input
+              class="input"
+              id="company_names"
+              placeholder="Company Names"
+              v-model="shortcuts['company_names']"
+            >
+            </b-form-input>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="2">
+            <label for="degree">Degree</label>
+          </b-col>
+          <b-col cols="10">
+            <b-form-input
+              class="input"
+              id="degree"
+              placeholder="Degree"
+              v-model="shortcuts['degree']"
+            >
+            </b-form-input>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="2">
+            <label for="designation">Designation</label>
+          </b-col>
+          <b-col cols="10">
+            <b-form-input
+              class="input"
+              id="designation"
+              placeholder="Designation"
+              v-model="shortcuts['designation']"
+            >
+            </b-form-input>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="2">
+            <label for="email">Email</label>
+          </b-col>
+          <b-col cols="10">
+            <b-form-input
+              class="input"
+              id="email"
+              placeholder="Email"
+              v-model="shortcuts['email']"
+            >
+            </b-form-input>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="2">
+            <label for="experience">Experience</label>
+          </b-col>
+          <b-col cols="10">
+            <b-form-textarea
+              class="input"
+              id="experience"
+              placeholder="Experience"
+              v-model="shortcuts['experience']"
+              rows="6"
+            >
+            </b-form-textarea>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="2">
+            <label for="skill">Skills</label>
+          </b-col>
+          <b-col cols="10">
+            <b-form-textarea
+              class="input"
+              id="skills"
+              placeholder="Skills"
+              v-model="shortcuts['skills']"
+              rows="4"
+            >
+            </b-form-textarea>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="2">
+            <label for="total_experience">Skills</label>
+          </b-col>
+          <b-col cols="10">
+            <b-form-input
+              class="input"
+              id="total_experience"
+              placeholder="Total Experience"
+              v-model="shortcuts['total_experience']"
+            >
+            </b-form-input>
+          </b-col>
+        </b-row>
+      </b-container>
       <b-button @click="submit()">Save</b-button>
     </b-form>
   </div>
@@ -57,10 +171,10 @@ export default {
         }
       });
     },
-    submit(){
-      alert("Successfully saved resume")
-      console.log("Successfully saved")
-    }
+    submit() {
+      alert("Successfully saved resume");
+      console.log("Successfully saved");
+    },
   },
 };
 </script>
