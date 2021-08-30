@@ -39,7 +39,7 @@ export default {
         { key: "experience", label: "Experience" },
         { key: "name", label: "Name" },
         { key: "skills", label: "Skills" },
-        { key: "total_experience", label: "Experience" },
+        { key: "total_experience", label: "Total Experience" },
       ],
     };
   },
